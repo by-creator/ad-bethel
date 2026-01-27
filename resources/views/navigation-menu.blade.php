@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <img src="{{ asset('apex/assets/images/inste.jpeg') }}" width="100" height="100" alt="INSTE Logo">
+                        <x-application-mark class="block h-9 w-auto" />
                     </a>
                 </div>
 
