@@ -45,7 +45,7 @@ class InscriptionController extends Controller
                   ->orWhere('telephone', 'like', "%{$search}%");
         })
         ->latest()
-        ->paginate(3)
+        ->paginate(2)
         ->withQueryString(); // 🔥 conserve ?search=...
 
     return view('inscription.index', compact('inscriptions', 'search'));
