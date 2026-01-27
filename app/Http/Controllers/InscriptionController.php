@@ -34,4 +34,25 @@ class InscriptionController extends Controller
 
         return redirect()->back()->with('success', 'Inscription enregistrée avec succès');
     }
+
+    public function index(Request $request)
+{
+    $search = $request->input('search');
+
+    $inscriptions = Inscription::when($search, function ($query, $search) {
+            $query->where('nom_prenom', 'like', "%{$search}%")
+                  ->orWhere('email', 'like', "%{$search}%")
+                  ->orWhere('telephone', 'like', "%{$search}%");
+        })
+        ->latest()
+        ->paginate(3)
+        ->withQueryString(); // 🔥 conserve ?search=...
+
+    return view('inscription.index', compact('inscriptions', 'search'));
+}
+
+    public function show(Inscription $inscription)
+    {
+        return view('inscription.show', compact('inscription'));
+    }
 }
