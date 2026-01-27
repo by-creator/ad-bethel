@@ -31,6 +31,7 @@ class InscriptionController extends Controller
 
         Inscription::create($request->all());
 
-        return redirect()->route('login')->with('success', 'Inscription enregistrée avec succès');
+
+        return redirect()->back()->with('success', 'Inscription enregistrée avec succès');
     }
 }

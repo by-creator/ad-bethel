@@ -52,14 +52,23 @@ body {
 }
 
 .progress-bar {
-    background-color: var(--brand-red);
-    border-radius: 10px;
+    width: 0% !important;
+    flex: 0 0 auto !important; /* 🔥 clé Bootstrap */
 }
+
+
 
 /* FORM */
 .form-group {
     margin-bottom: 18px;
 }
+
+ 
+.is-invalid {
+    border-color: #b91c1c !important;
+    box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.15);
+}
+
 
 label {
     font-size: 13px;

@@ -26,7 +26,39 @@
         <div class="progress-bar" id="progressBar"></div>
     </div>
 
-    <form method="POST" action="{{ route('inscription.store') }}" id="wizardForm">
+@if (session('success'))
+<script>
+    Swal.fire({
+        icon: 'success',
+        title: 'Succès',
+        text: "{{ session('success') }}",
+        confirmButtonColor: '#b91c1c'
+    });
+</script>
+@endif   
+@if ($errors->has('email'))
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Swal.fire({
+                icon: 'error',
+                title: 'Email déjà utilisé',
+                text: "{{ $errors->first('email') }}",
+                confirmButtonColor: '#ff5a5f'
+            });
+        });
+    </script>
+@endif
+@if ($errors->any())
+<script>
+Swal.fire({
+    icon: 'error',
+    title: 'Erreur de validation',
+    html: `{!! implode('<br>', $errors->all()) !!}`,
+    confirmButtonColor: '#ff5a5f'
+});
+</script>
+@endif
+    <form method="POST" action="{{ route('inscription.store') }}" id="wizardForm" novalidate>
         @csrf
 
         <!-- STEP 1 -->
@@ -38,7 +70,7 @@
 
             <div class="form-group">
                 <label>Téléphone</label>
-                <input class="form-control" name="telephone">
+                <input class="form-control" type="number" name="telephone">
             </div>
 
             <div class="wizard-actions">
@@ -109,7 +141,7 @@
         <!-- STEP 5 -->
         <div class="step">
             <div class="form-group">
-                <label>Engagement</label>
+                <label>Garantissez-vous de suivre la formation du début à la fin ?</label>
                 <select class="form-control" name="engagement">
                     <option value="">Choisir</option>
                     <option value="oui">Oui</option>
@@ -118,7 +150,7 @@
             </div>
 
             <div class="form-group">
-                <label>Engagement paiement</label>
+                <label>Garantissez-vous l'achat du manuel à hauteur de 10.000 FCFA ?</label>
                 <select class="form-control" name="engagement_paiement">
                     <option value="">Choisir</option>
                     <option value="oui">Oui</option>
