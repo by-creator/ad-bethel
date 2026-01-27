@@ -1,1 +1,1 @@
-<img src="{{ asset('apex/assets/images/inste.jpeg') }}">
+<img src="{{ asset('apex/assets/images/inste.jpeg') }}" width="400">
