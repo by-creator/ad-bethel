@@ -18,4 +18,8 @@ class Inscription extends Model
         'engagement',
         'engagement_paiement',
     ];
+
+    protected $casts = [
+        'date_conversion' => 'date',
+    ];
 }

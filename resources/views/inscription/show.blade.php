@@ -25,7 +25,7 @@
 
             <div class="row mb-2">
                 <div class="col-md-6"><strong>Église :</strong> {{ $inscription->eglise }}</div>
-                <div class="col-md-6"><strong>Date conversion :</strong> {{ $inscription->date_conversion }}</div>
+                <div class="col-md-6"><strong>Date conversion :</strong> {{ $inscription->date_conversion->format('d/m/Y') }}</div>
             </div>
 
             <div class="mb-3">
