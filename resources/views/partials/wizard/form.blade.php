@@ -1,4 +1,18 @@
+
+
 <div class="auth-card">
+
+    <div style="text-align:center; margin-bottom:20px">
+    <a href="{{ route('login') }}"
+       style="
+           font-size:13px;
+           color:#b91c1c;
+           text-decoration:none;
+           font-weight:500;
+       ">
+        CONNEXION
+    </a>
+</div>
 
     <!-- IMAGE -->
     <img src="{{ asset('apex/assets/images/inste.jpeg') }}">
