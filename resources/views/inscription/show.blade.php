@@ -35,10 +35,10 @@
 
             <div class="row">
                 <div class="col-md-6">
-                    <strong>Engagement :</strong> {{ ucfirst($inscription->engagement) }}
+                    <strong>Serais-je engagé à terminer la formation ? :</strong> {{ ucfirst($inscription->engagement) }}
                 </div>
                 <div class="col-md-6">
-                    <strong>Paiement du manuel :</strong> {{ ucfirst($inscription->engagement_paiement) }}
+                    <strong>Vais-je payer le manuel ? :</strong> {{ ucfirst($inscription->engagement_paiement) }}
                 </div>
             </div>
 
