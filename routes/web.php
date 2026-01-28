@@ -3,10 +3,10 @@
 use App\Http\Controllers\InscriptionController;
 use Illuminate\Support\Facades\Route;
 
-
+/*
 Route::get('/register', function () {
     return redirect()->route('login');
-})->name('register');
+})->name('register');*/
 
 
 Route::get('/', [InscriptionController::class, 'create'])->name('inscription.create');
