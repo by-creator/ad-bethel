@@ -26,7 +26,6 @@ class InscriptionController extends Controller
             'motivation' => 'required|string',
 
             'engagement' => 'required',
-            'engagement_paiement' => 'required',
         ]);
 
         Inscription::create($request->all());

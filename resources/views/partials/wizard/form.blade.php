@@ -123,7 +123,7 @@ Swal.fire({
         <!-- STEP 4 -->
         <div class="step">
             <div class="form-group">
-                <label>Date de conversion</label>
+                <label>Date de baptême ou conversion </label>
                 <input type="date" class="form-control" name="date_conversion">
             </div>
 
@@ -150,12 +150,7 @@ Swal.fire({
             </div>
 
             <div class="form-group">
-                <label>Garantissez-vous l'achat du manuel à hauteur de 10.000 FCFA ?</label>
-                <select class="form-control" name="engagement_paiement">
-                    <option value="">Choisir</option>
-                    <option value="oui">Oui</option>
-                    <option value="non">Non</option>
-                </select>
+                <label>NB : Le prix du manuel  de formation est de 10.000 FCFA</label>
             </div>
 
             <div class="wizard-actions">

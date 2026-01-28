@@ -27,7 +27,6 @@ return new class extends Migration
             $table->date('date_conversion');
             $table->text('motivation');
             $table->enum('engagement', ['oui', 'non']);
-            $table->enum('engagement_paiement', ['oui', 'non']);
             $table->timestamps();
         });
     }

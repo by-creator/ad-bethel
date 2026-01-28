@@ -37,9 +37,6 @@
                 <div class="col-md-6">
                     <strong>Serais-je engagé à terminer la formation ? :</strong> {{ ucfirst($inscription->engagement) }}
                 </div>
-                <div class="col-md-6">
-                    <strong>Vais-je payer le manuel ? :</strong> {{ ucfirst($inscription->engagement_paiement) }}
-                </div>
             </div>
 
         </div>

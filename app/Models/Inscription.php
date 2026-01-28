@@ -16,7 +16,6 @@ class Inscription extends Model
         'date_conversion',
         'motivation',
         'engagement',
-        'engagement_paiement',
     ];
 
     protected $casts = [
