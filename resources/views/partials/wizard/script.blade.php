@@ -87,5 +87,17 @@
         });
 
         showStep(0);
+
+        // 🔒 Bloc de soumission : période des inscriptions terminée
+        document.getElementById('wizardForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            Swal.fire({
+                icon: 'info',
+                title: 'Inscriptions closes',
+                text: 'La période des inscriptions est terminée. Merci de votre intérêt !',
+                confirmButtonColor: '#b91c1c',
+                confirmButtonText: 'Compris'
+            });
+        });
     });
 </script>
