@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EnqueteObedEdomController;
 use App\Http\Controllers\InscriptionController;
 use Illuminate\Support\Facades\Route;
 
@@ -11,6 +12,9 @@ Route::get('/register', function () {
 
 Route::get('/', [InscriptionController::class, 'create'])->name('inscription.create');
 Route::post('/inscription', [InscriptionController::class, 'store'])->name('inscription.store');
+
+Route::get('/enquete_obed_edom', [EnqueteObedEdomController::class, 'create'])->name('enquete_obed_edom.create');
+Route::post('/enquete_obed_edom', [EnqueteObedEdomController::class, 'store'])->name('enquete_obed_edom.store');
 
 
 Route::middleware([

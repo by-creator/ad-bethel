@@ -1,0 +1,14 @@
+Notes
+
+Je souhaite que de la même manière tu as fait le wizard sur la 
+page welcome que tu crée une autre page avec une autre route nommée
+/enquete_obed_edom qui contiendra un wizard avec les rubriques 
+suivantes, je précise que dans cette page tu remplacera l'image d'en 
+haut par les titres des rubriques ci-dessous : 
+
+Rubriques :
+1. Prendre des propositions, des appréciations des membres 
+2. Présenter la première rencontre en présentiel 
+3. Quels sont les sujets qu’ils veulent voir aborder dans la famille selon leurs défis ?
+4. Prendre la disponibilité des membres pour le 3e culte et qu’est ce qui pourrait les inciter à venir au 3e culte ?
+5. Êtes-vous entrepreneur ? Quelle activité faites vous ?
