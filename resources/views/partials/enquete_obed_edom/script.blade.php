@@ -62,6 +62,7 @@
         }
 
         document.querySelectorAll('.next').forEach(btn => {
+            if (btn.classList.contains('btn-terminer')) return;
             btn.addEventListener('click', () => {
                 if (!validateCurrentStep()) return;
 
@@ -71,6 +72,44 @@
                 }
             });
         });
+
+        const btnTerminer = document.querySelector('.btn-terminer');
+        if (btnTerminer) {
+            btnTerminer.addEventListener('click', async () => {
+                if (!validateCurrentStep()) return;
+
+                const form = document.getElementById('wizardForm');
+                const formData = new FormData(form);
+
+                btnTerminer.disabled = true;
+                btnTerminer.textContent = 'Enregistrement...';
+
+                try {
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        headers: { 'Accept': 'application/json', 'X-CSRF-TOKEN': formData.get('_token') },
+                        body: formData,
+                    });
+
+                    if (response.ok) {
+                        current++;
+                        showStep(current);
+                    } else {
+                        const data = await response.json();
+                        const messages = data.errors
+                            ? Object.values(data.errors).flat().join('<br>')
+                            : (data.message || 'Une erreur est survenue.');
+                        Swal.fire({ icon: 'error', title: 'Erreur', html: messages, confirmButtonColor: '#b91c1c' });
+                        btnTerminer.disabled = false;
+                        btnTerminer.textContent = 'Terminer';
+                    }
+                } catch (e) {
+                    Swal.fire({ icon: 'error', title: 'Erreur', text: 'Impossible de contacter le serveur.', confirmButtonColor: '#b91c1c' });
+                    btnTerminer.disabled = false;
+                    btnTerminer.textContent = 'Terminer';
+                }
+            });
+        }
 
         document.querySelectorAll('.prev').forEach(btn => {
             btn.addEventListener('click', () => {

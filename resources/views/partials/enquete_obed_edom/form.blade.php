@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             <div class="wizard-actions">
                 <button type="button" class="btn-prev prev">Précédent</button>
-                <button type="button" class="btn-next next">Suivant</button>
+                <button type="button" class="btn-next btn-terminer">Terminer</button>
             </div>
         </div>
 
@@ -166,15 +166,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     font-size:32px;color:#b91c1c;">✓</div>
 
                 <h4>Merci d'avoir répondu à l'enquête</h4>
-                <p style="color:#6b7280;font-size:14px">
-                    Vous pouvez revenir vérifier vos réponses<br>
-                    ou finaliser l'envoi.
-                </p>
-
-                <div class="wizard-actions">
-                    <button type="button" class="btn-prev prev">Précédent</button>
-                    <button type="submit" class="btn-next">Finaliser</button>
-                </div>
             </div>
         </div>
 

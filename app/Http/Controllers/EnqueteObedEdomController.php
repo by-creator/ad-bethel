@@ -30,6 +30,10 @@ class EnqueteObedEdomController extends Controller
 
         EnqueteObedEdom::create($request->all());
 
+        if ($request->expectsJson()) {
+            return response()->json(['success' => true]);
+        }
+
         return redirect()->route('enquete_obed_edom.create')
             ->with('success', 'Merci ! Vos réponses ont bien été enregistrées.');
     }
