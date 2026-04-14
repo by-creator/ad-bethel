@@ -17,6 +17,9 @@ Route::get('/enquete_obed_edom', [EnqueteObedEdomController::class, 'create'])->
 Route::post('/enquete_obed_edom', [EnqueteObedEdomController::class, 'store'])->name('enquete_obed_edom.store');
 
 
+Route::get('/enquete_obed_edom_dashboard', [EnqueteObedEdomController::class, 'dashboard'])
+    ->name('enquete_obed_edom_dashboard');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -24,9 +27,8 @@ Route::middleware([
 ])->group(function () {
 
     Route::get('/dashboard', [InscriptionController::class, 'index'])
-    ->middleware(['auth'])
-    ->name('dashboard');
-
+        ->middleware(['auth'])
+        ->name('dashboard');
 
     Route::get('/inscriptions', [InscriptionController::class, 'index'])
         ->name('inscriptions.index');
