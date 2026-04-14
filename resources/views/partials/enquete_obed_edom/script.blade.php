@@ -17,6 +17,7 @@
             { number: 'Rubrique 3', title: 'Sujets à aborder selon vos défis' },
             { number: 'Rubrique 4', title: 'Disponibilité pour le 3e culte' },
             { number: 'Rubrique 5', title: 'Êtes-vous entrepreneur ?' },
+            { number: 'Rubrique 6', title: 'Sortie de l\'année' },
             { number: '',           title: 'Confirmation' },
         ];
 

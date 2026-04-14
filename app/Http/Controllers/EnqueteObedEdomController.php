@@ -26,6 +26,7 @@ class EnqueteObedEdomController extends Controller
             'incitation_3e_culte'  => 'nullable|string',
             'est_entrepreneur'     => 'required|in:oui,non',
             'activite'             => 'nullable|string',
+            'lieu_sortie'          => 'nullable|string',
         ]);
 
         EnqueteObedEdom::create($request->all());

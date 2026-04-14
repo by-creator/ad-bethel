@@ -20,5 +20,6 @@ class EnqueteObedEdom extends Model
         'incitation_3e_culte',
         'est_entrepreneur',
         'activite',
+        'lieu_sortie',
     ];
 }

@@ -9,7 +9,7 @@
 
     <div class="auth-title">Veuillez remplir le formulaire</div>
     <div class="auth-subtitle">
-        Étape <span id="stepNumber"></span> sur 7
+        Étape <span id="stepNumber"></span> sur 8
     </div>
 
     <div class="progress">
@@ -152,11 +152,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
             <div class="wizard-actions">
                 <button type="button" class="btn-prev prev">Précédent</button>
+                <button type="button" class="btn-next next">Suivant</button>
+            </div>
+        </div>
+
+        <!-- STEP 7 — Sortie de l'année -->
+        <div class="step">
+            <div class="form-group">
+                <label>En vue d'une sortie au courant de cette année, quel lieu proposeriez-vous ?</label>
+                <textarea class="form-control" name="lieu_sortie" placeholder="Proposez un lieu pour la sortie..."></textarea>
+            </div>
+
+            <div class="wizard-actions">
+                <button type="button" class="btn-prev prev">Précédent</button>
                 <button type="button" class="btn-next btn-terminer">Terminer</button>
             </div>
         </div>
 
-        <!-- STEP 7 — Confirmation -->
+        <!-- STEP 8 — Confirmation -->
         <div class="step">
             <div style="text-align:center; padding:20px 10px">
                 <div style="
